@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Owner Registration | PG Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#fff7e6,#ffe0b2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.auth-card {
+  background:#fff;
+  padding:32px;
+  border-radius:16px;
+  width:100%;
+  max-width:420px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+.auth-card h2 {
+  text-align:center;
+  margin-bottom:24px;
+}
+.form-group {
+  margin-bottom:18px;
+}
+.form-group label {
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+.form-group input {
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+.primary-btn {
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#ff9800;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+.error-text {
+  margin-top:12px;
+  text-align:center;
+  color:#d32f2f;
+  font-weight:600;
+}
+.auth-link {
+  margin-top:16px;
+  text-align:center;
+}
+.auth-link a {
+  color:#ff9800;
+  font-weight:600;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="auth-card">
+
+  <h2>Create Owner Account</h2>
+
+  <form id="registerForm" novalidate>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="regEmail" required>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="regPassword" required>
+    </div>
+
+    <button type="submit" class="primary-btn">Register</button>
+
+  </form>
+
+  <p id="regError" class="error-text"></p>
+
+  <div class="auth-link">
+    Already registered?
+    <a href="/login.html">Login</a>
+  </div>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Owner Dashboard | PG Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">PG Finder</div>
+  <nav class="nav-tabs">
+    <a href="/">Home</a>
+    <a href="/tenant">Tenant</a>
+    <a class="active">Owner Dashboard</a>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </nav>
+</header>
+
+<section class="owner-section">
+
+  <h2 class="section-title">Add New PG</h2>
+
+  <form id="pgForm" class="pg-form clean-form">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>PG Name</label>
+        <input id="name" type="text" placeholder="e.g. GreenField PG" required>
+      </div>
+
+      <div class="form-group">
+        <label>Location / Area</label>
+        <input id="location" type="text" placeholder="e.g. New Town" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Monthly Rent (₹)</label>
+        <input id="rent" type="number" placeholder="e.g. 8000" required>
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <select id="status">
+          <option value="Available">Available</option>
+          <option value="Limited">Limited</option>
+          <option value="Full">Full</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>WhatsApp Number</label>
+        <input id="whatsapp" type="text" placeholder="10-digit number" required>
+      </div>
+
+      <div class="form-group">
+        <label>Google Maps Link</label>
+        <input id="map" type="text" placeholder="Optional">
+      </div>
+    </div>
+
+    <div class="facility-box">
+      <h4>Facilities</h4>
+      <div class="facility-grid">
+        <label><input type="checkbox" value="WiFi"> WiFi</label>
+        <label><input type="checkbox" value="Food"> Food</label>
+        <label><input type="checkbox" value="AC"> AC</label>
+        <label><input type="checkbox" value="Laundry"> Laundry</label>
+        <label><input type="checkbox" value="Parking"> Parking</label>
+        <label><input type="checkbox" value="Power Backup"> Power Backup</label>
+        <label><input type="checkbox" value="CCTV"> CCTV</label>
+        <label><input type="checkbox" value="Lift"> Lift</label>
+        <label><input type="checkbox" value="Housekeeping"> Housekeeping</label>
+      </div>
+    </div>
+
+    <button type="submit" class="primary-btn">Add PG</button>
+
+  </form>
+
+  <h2 class="section-title">Your PG Listings</h2>
+
+  <div id="pgList" class="owner-pg-list"></div>
+
+</section>
+
+<script src="js/owner.js"></script>
+</body>
+</html>

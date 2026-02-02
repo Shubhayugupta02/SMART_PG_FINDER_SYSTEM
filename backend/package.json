@@ -1,0 +1,16 @@
+{
+  "name": "pg-finder-system",
+  "version": "4.0.0",
+  "description": "Advanced PG Management System using Node, Express and JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
